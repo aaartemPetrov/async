@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "async-await",
+  "version": "1.0.0",
+  "main": "async.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
