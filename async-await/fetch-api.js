@@ -24,12 +24,20 @@ console.log(urlOfRandomDog.message);
 //coz of this we can use try...catch
 async function getRandomDogError() {
     try {
-        let response = await fetch('https://dog.4124124eo/ap12412i/breeds/im4132age/ran124124dom');
+        let response = await fetch('WRONG_URL');
         let urlOfRandomDog = await response.json();
         console.log(urlOfRandomDog.message);
     } catch(error) {
-        console.log('FETCH ERROR: ' + error);
+        console.log('INSIDE ASYNC FETCH ERROR: ' + error);
     }
 }
 
 getRandomDogError();
+//OR
+async function getRandomDogError2() {
+    let response = await fetch('WRONG_URL');
+    let urlOfRandomDog = await response.json();
+    console.log(urlOfRandomDog.message);
+}
+
+getRandomDogError2().catch(error => console.log('OUTSIDE ASYNC FETCH ERROR: ' + error));
